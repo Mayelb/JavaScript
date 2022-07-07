@@ -31,7 +31,7 @@ function Iniciodecompra(arrayItems) {
 
 function ContinuarCompra() {
     arrayItems.forEach((Items) => {
-      alert( "Has agregado al carrito" + producto +" por $" + (precio * 1.21));
+      alert(`Has agregado al carrito: ${Items.producto} por $ ${Items.precio *1.21}`);
     });
 }
 
@@ -45,9 +45,9 @@ function NombreCliente(){
  }  
   
 function CuponDescuento() {
-     const giftcard = precio.filter((el) => el.precio > 100);
-        for ( const giftcard of giftcard) {
-        alert("¡Felicitaciones!"+ giftcard.cliente + "por tu compra de" + giftcard.precio + " recibiste un cupon de descuento de $600 para tu próxima compra");
+     const cupones = stock.filter((el) => el.precio > 600);
+        for ( const cupon of cupones) {
+        alert("¡Felicitaciones!" + cliente + "por tu compra de: $" + cupon.precio + " recibiste un cupon de descuento de $600 para tu próxima compra");
        }
 }
 
