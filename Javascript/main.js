@@ -45,7 +45,7 @@ function NombreCliente(){
  }  
   
 function CuponDescuento() {
-     const cupones = stock.filter((el) => el.precio > 600);
+     const cupones = stock.filter((el) => el.precio > 500);
         for ( const cupon of cupones) {
         alert("¡Felicitaciones!" + cliente + "por tu compra de: $" + cupon.precio + " recibiste un cupon de descuento de $600 para tu próxima compra");
        }
