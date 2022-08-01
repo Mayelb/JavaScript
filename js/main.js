@@ -1,13 +1,12 @@
 function saludo(){
-    Swal.fire({
-        title: '¡Bienvenido al Bazar Rosarito!',
-        text: 'Tu tienda de regalos de confianza',
-        imageUrl: '../img/saludo.jpg',
-        imageWidth: 400,
-        imageHeight: 300,
-        imageAlt: 'Custom image',
-      })
-
+  Swal.fire({
+    title: '¡Bienvenido al Bazar Rosarito!',
+    text: 'Tu tienda de regalos de confianza',
+    imageUrl: '../img/saludo.jpg',
+    imageWidth: 400,
+    imageHeight: 300,
+    imageAlt: 'Custom image',
+  })
 }
    
 saludo();
@@ -65,7 +64,7 @@ stockProducto.forEach((producto,indice) =>{
     <div class="card-body text-center">
       <h5 class="card-title">${producto.producto}</h5>
       <p class="card-text"> $${producto.precio}</p>
-      <a href="" class="btn btn-outline-info"  onClick="agregarAlcarrito(${indice})">Agregar</a>
+      <a href="" class="btn btn-outline-info" onClick="agregarAlcarrito(${indice})">Agregar</a>
     </div>
     </div>`
     contenedorproducto.appendChild(card);
@@ -87,11 +86,9 @@ const actualizarCarrito =()=>{
             <button class="btn btn-info" id="eliminar-producto" onClick="eliminarProducto(${indice})"><i class="fas fa-trash-alt"></button>`; 
 
         contenedorCarrito.appendChild(div);
-        console-console.log(carrito)
+        console-console.log(div)
     });
    
-    
-
     const contenedorTotales =document.createElement("totales");
     contenedorTotales.className="Total Compra";
     contenedorTotales.innerHTML=`<div class="total"> Total: $${total}</div>
@@ -110,6 +107,18 @@ const actualizarCarrito =()=>{
    let email = document.getElementById("email").value;
    contenedorCarrito.innerHTML=""
 }); 
+fetch("https://formsubmit.co/ajax/ff2478b0eb636b2ecf2d30df7a49df71",{
+  method:"POST",
+  body:new FormData(e.target)
+})
+.then(datos => datos.ok ? datos.json(): Promise.reject(datos))
+.then(json=>{
+  console.log(json);
+  listForm.reset();
+})
+.catcher(error=>{
+console.log(error);
+});
 }
    const agregarAlcarrito=(indice)=>{
      const indiceCarrito = carrito.findIndex((elemento)=>{
@@ -134,6 +143,18 @@ const actualizarCarrito =()=>{
      actualizarCarrito()
    };
    
+   const finalizarCompra = ()=>{
+    Swal.fire({
+      title: '¡Ya casi es tuyo!',
+      icon: 'info',
+      showCloseButton: true,
+      focusConfirm: false,
+      confirmButtonText:'<a href="../form.html"><b>Continuar</b></a>',
+      confirmButtonAriaLabel: 'Thumbs up, Continuar!',
+      confirmButtonColor:'#BDF2F4',
+    })
+
+   }
    const actualizarStorage =(carrito)=>{
      localStorage.setItem("carrito", JSON.stringify(carrito));
    }
