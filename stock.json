@@ -1,0 +1,38 @@
+ [
+    {
+       "id": 1,
+       "producto": "Taza", 
+       "precio":"500",
+       "img": "../img/taza.jpg"
+    },
+    {
+       "id": 2,
+       "producto":"Mate", 
+       "precio":"600",
+       "img":"../img/mate.jpg"
+    },
+    {
+       "id": 3,
+       "producto":"Organizador",
+       "precio":"1200",
+       "img":"../img/organizador.jpg"
+    },
+    {  
+        "id": 4,
+        "producto":"Bolsa de agua caliente", 
+        "precio":"2400",
+        "img":"../img/bolsa de agua caliente.jpg"
+    },
+    {
+        "id": 5,
+        "producto":"Pantumedias",
+        "precio":"1800",
+        "img":"../img/pantumedias.jpg"
+    }, 
+    {
+        "id": 6,
+        "producto":"Vaso térmico",
+        "precio":"900",
+        "img":"../img/vaso termico.jpg"
+    }  
+]
