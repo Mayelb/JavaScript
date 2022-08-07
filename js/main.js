@@ -1,17 +1,3 @@
-function saludo(){
-  Swal.fire({
-    title: '¡Bienvenido al Bazar Rosarito!',
-    text: 'Tu tienda de regalos de confianza',
-    imageUrl: '../img/saludo.jpg',
-    imageWidth: 400,
-    imageHeight: 300,
-    imageAlt: 'Custom image',
-  })
-}
-   
-saludo();
-
-  
  let stockProducto = [
     { 
         id: 1,
