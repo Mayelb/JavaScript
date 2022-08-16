@@ -2,68 +2,174 @@
     height: 100%;
     width: 100%;
     background:#BDF2F4;
-    box-shadow: 10px 10px 50px rgb(0,0,0,0.1);
+    box-shadow: 10px 10px 70px rgba(0, 0, 0, 0.1);
 }
- .encabezado a{
+@media (max-width:768px){
+    .encabezado{
+         height: ;
+    }
+} 
+.encabezado a{
 font-size: 30px;
-font-family: Arial, Helvetica, sans-serif;
-color:#05316b ;
+font-family:'Montserrat', sans-serif;
+color:#5f5d5d;
  }
+ @media (max-width:768px){
+    .encabezado a{
+        font-size: 25px;
+    }
+} 
 
 #logo{
     width: 200px;
 }
+@media (max-width:768px){
+    #logo{
+        width: 150px;
+    }
+} 
+.carousel-inner{
+   padding-top: 15px;
+    max-height: 700px;
+
+}
+
+.carousel-item img{
+    width: 100px;
+}    
+.container-boton{
+    width: 100px;  
+    margin: 10px;  
+
+}
+.container-boton:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.boton{
+    width: 80px;
+    border-radius: 60px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1);
+}
 #carrito{
-    width: 500px;
+    width: 550px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 60px rgb(0,0,0,0.1);
+    padding: 10px;
+    margin-top: 30px;
+ }
+ #carrito img{
+    width: 80px;
+ }
+ p{
+    text-align: center;
+    font-family:'Montserrat', sans-serif;
+    color:#5f5d5d;
+ }
+ h3{
+    font-family:'Montserrat', sans-serif;
+    color:#5f5d5d ;
+    padding: 10px;
+    margin: 10px;  
+ }
+#finalizar-compra{
+    font-size: 20px;
+    font-family:'Montserrat', sans-serif;
+    color:#5f5d5d ;
+    padding: 10px;
+    margin: 20px;
     
-}
-#carrito img{
-width: 60px;
-}
-#container{
+ }
+
+#contenedor{
  width: 100%;
  display:grid;
- grid-template-columns: 400px 400px 400px;
+ grid-template-columns: 500px 500px 500px;
  justify-content: center;
  padding-top: 30px;
  padding-bottom: 30px;
  
 }
+@media (max-width:768px){
+     #contenedor{
+         display: grid;
+         grid-template-columns: 300px 300px;
+        margin: 20px;
+    }
+ }
 .item-card {
-    width: 300px;
-    height: 450px;
+    width: 400px;
+    height: 550px;
     padding: 20px;
     margin: 10px;
+    background: linear-gradient(90deg, rgba(169,237,237,1) 0%, rgba(155,221,237,1) 50%, rgba(243,161,223,1) 100%); 
     border-radius: 14px;
     overflow: hidden;
 }
+@media (max-width:768px){
+    .item-card{
+        width: 200px;
+        height: 350px;
+    }
+} 
  h5{
-    font-family: Arial, Helvetica, sans-serif;
-    color:#05316b;   
+    font-family:'Montserrat', sans-serif;
+    color:#5f5d5d  ;   
     font-weight:400;
  }
- 
- p{
-    font-family: Arial, Helvetica, sans-serif;
-    color:#05316b;
- }
+
 .logo{
     width: 300px;
 }
+h2{
+    font-family:'Montserrat', sans-serif;
+    color:#5f5d5d  ;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
 #datos{
-    width: 1200px;
+    width: 800px;
     padding:30px;
     margin: 30px;
+    border-radius: 20px;
     box-shadow: 10px 10px 50px rgb(0,0,0,0.1);
     background: linear-gradient(90deg, rgba(169,237,237,1) 0%, rgba(155,221,237,1) 50%, rgba(243,161,223,1) 100%); 
    
 
 }
-h2{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #05316b ;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+@media (max-width:768px){
+    #datos{
+        width: 300px;
+    }
+} 
+
+label{
+    font-size: 20px;
+    font-family:'Montserrat', sans-serif;;
+    color:#5f5d5d ;
 }
+#datos input{
+    height: 50px;
+    border-radius: 20px;
+}
+@media (max-width:768px){
+    #datos input{
+       height: 30px ;  
+    }
+} 
+
+#enviar{
+    width:200px;
+    margin-top: 20px;
+    font-family:'Montserrat', sans-serif;;
+    color:#fafbfc ;
+    font-weight: bold;  
+    border-radius: 40px;
+}
+@media (max-width:768px){
+    #enviar{
+       width: 100px; 
+    }
+} 
  
